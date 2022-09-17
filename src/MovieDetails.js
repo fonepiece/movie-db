@@ -50,6 +50,7 @@ export default function MovieDetails() {
             </div>
             <div style={{flex: 2}}>
                 <h1>{movie.title}</h1>
+                <p>{movie.release_date}</p>
                 <div>
                     {[...Array(fullStarCount).keys()].map(i => <i key={i} className="fa-solid fa-star"></i>)}
                     {!!halfStarCount && [...Array(halfStarCount).keys()].map(i => <i key={i} className="fa-regular fa-star-half-stroke"></i>)}
