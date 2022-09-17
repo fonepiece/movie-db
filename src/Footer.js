@@ -1,7 +1,9 @@
 function Footer() {
     return (
-        <footer className="site-footer" id="contact">
-            <p>© | Reyhan Taze and Yegor Nino - For Educational Purposes Only.</p>
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+            <p className="text-muted">© | Reyhan Taze and Yegor Nino - For Educational Purposes Only.</p>
+            </div>
         </footer>
     )
 }

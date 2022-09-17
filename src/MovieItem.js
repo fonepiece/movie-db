@@ -1,6 +1,6 @@
 function MovieItem({movie, isFavorite, toggleFavorites}) {
     const poster = movie.poster_path
-        ? `https://www.themoviedb.org/t/p/w440_and_h660_face/${movie.poster_path}` 
+        ? `https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}` 
         : 'http://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png'
 
     const fullStarCount = Math.floor(movie.vote_average / 2)
@@ -15,14 +15,14 @@ function MovieItem({movie, isFavorite, toggleFavorites}) {
                 <img src={poster} alt={movie.title} />
                 <div className="hover-info">
                     <p>{movie.overview}</p>
-                    <a href={`/single/${movie.id}`}>
+                    <a href={`/movie/${movie.id}`}>
                         <button type="button" className="btn btn-outline-danger ">More info</button>
                     </a>
                 </div>
             </div>
             <div className="movie-info">
                 <div className="poster-bottom">
-                    <a href={`/single/${movie.id}`} className="movie-title">{movie.title}</a>
+                    <a href={`/movie/${movie.id}`} className="movie-title">{movie.title}</a>
                     <p>{movie.release_date}</p>
                 </div>
                 <div>

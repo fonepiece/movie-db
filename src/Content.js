@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MovieCarousel from "./MovieCarousel";
 import MovieItem from "./MovieItem";
 
 function Content({isFavoriteContent}) {
@@ -50,25 +51,27 @@ function Content({isFavoriteContent}) {
     if (!movies) return
     return (
         <main className="site-main container">
-            {isFavoriteContent}
-            <section className="select-page">
-                <div className="row g-3 align-items-end">
-                    <div className="col-auto">
-                        <label htmlFor="movie-filter" className="col-form-label">Display by:</label>
+            <div style={{position: 'relative', height: '350px', overflow: 'hidden'}}>
+                <MovieCarousel movies={movies} />
+                <section className="select-page">
+                    <div className="row g-3 align-items-end">
+                        <div className="col-auto">
+                            <label htmlFor="movie-filter" className="col-form-label">Display by:</label>
+                        </div>
+                        <div className="col-auto">
+                            <select value={filter} onChange={(e) => setFilter(e.target.value)} name="movie-filter" className="form-select movie-filter" aria-label="Default select example">
+                                <option value="popular">Popular</option>
+                                <option value="now_playing">Now Playing</option>
+                                <option value="top_rated">Top Rating</option>
+                                <option value="upcoming">Upcoming</option>
+                            </select>
+                        </div>
                     </div>
-                    <div className="col-auto">
-                        <select value={filter} onChange={(e) => setFilter(e.target.value)} name="movie-filter" className="form-select movie-filter" aria-label="Default select example">
-                            <option value="popular">Popular</option>
-                            <option value="now_playing">Now Playing</option>
-                            <option value="top_rated">Top Rating</option>
-                            <option value="upcoming">Upcoming</option>
-                        </select>
+                    <div>
+                        <h1 className="main-title">All Movies</h1>
                     </div>
-                </div>
-                <div>
-                    <h1 className="main-title">All Movies</h1>
-                </div>
-            </section>
+                </section>
+            </div>
             <section className="movie-container">
                 <div className="all-movies">
                     {movies.map(movie => <MovieItem key={movie.id} movie={movie} toggleFavorites={toggleFavorites} isFavorite={!!favs.find(m => m.id === movie.id)} />)}
