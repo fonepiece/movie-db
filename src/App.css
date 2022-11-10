@@ -14,7 +14,9 @@ body {
   text-align: center;
   padding: 5px;
 }
-
+.title {
+  color: red;
+}
 
   /* Typography
 --------------------------------------------- */
@@ -26,6 +28,10 @@ ul {
 .navbar-brand a {
   font-family: 'Uncial Antiqua', cursive;
   text-decoration: none;
+}
+
+a.favorite-icon {
+  cursor: pointer;
 }
 
 img {
@@ -48,23 +54,38 @@ img {
 
   /*section1 */
   .select-page {
-      padding-top: 3rem;
-      padding-bottom: 5rem;
+      position: absolute;
+      top: 240px;
+      right:0px;
+      left: 0px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       padding-right: 3rem;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column-reverse;
       justify-content: space-between;
       padding-left: 100px;
-      
+      background-color: rgba(0, 0, 0, 0.163);
+  }
+
+  .select-page .main-title {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 50em) {
+    .select-page {
+      flex-direction: row-reverse;
+
+    }
+
   }
   .movie-filter {
       width: 150px;
+      line-height: 1;
+      margin-bottom: 4px;
   }
 
-  .favorite-movies {
-    margin-top: 60px;
-  }
-
+ 
   /*section2 */
   .movie-name p{
       color: #fff;
@@ -170,11 +191,7 @@ img {
   .hover-info {
     margin: 1rem;
     border: 0.35rem solid;
-    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-    animation: borderRotate var(--d) linear infinite forwards;
-}
-
-.hover-info:nth-child(2) {
+    padding: 3vw;
     border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
     animation: borderRadial var(--d) linear infinite forwards;
 }
@@ -218,6 +235,8 @@ img {
 .movie-container {
   min-width: min(40rem, 100%);
 }
+
+
   @media screen and (min-width: 50em) {
       /*--------------------------------------------------------------*/
       p {
@@ -309,7 +328,21 @@ img {
   background-color: rgb(0,0,0, 0.7);
   padding: 20px;
   margin-top: 20px;
+  flex-direction: column;
 }
+.movie-details img {
+  max-width: 50%;
+}
+
+@media screen and (min-width: 50em) {
+  .movie-details {
+    flex-direction: row;
+  }
+  .movie-details img {
+    max-width: 100%;
+  }
+}
+
 
 .bg-cover {
   z-index: -1;
@@ -327,12 +360,15 @@ img {
 
 .about-page-box {
   /* background-image: url(images/thor-back.webp); */
-  padding: 30px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-content: center;
-  border: solid .1rem rgb(10, 10, 10) ;
-  background-color: rgba(0, 0, 0, 0.68);
+  border: solid .1rem rgba(233, 232, 239, 0.197) ;
+  background-color: rgba(0, 0, 0, 0.282);
+}
+.about-page-info{
+  padding: 30px;
 }
 
 a.nav-link.active {
@@ -373,4 +409,25 @@ a.nav-link {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #fb49fb;
   --bs-btn-disabled-border-color: #fb49fb;
+}
+.movie-title{
+  font-size: 20px;
+  color: #fb49fb;
+  text-shadow: 3px 0px 7px rgba(81,67,21,0.8), 
+	  -3px 0px 7px rgba(81,67,21,0.8), 
+	  0px 4px 7px rgba(81,67,21,0.8);
+}
+.title-fav{
+  text-align: left;
+  padding-top: 30px;
+  padding-left: 10px;
+  color: red;
+}
+.sorry-text{
+  padding-top: 90px;
+}
+.cine-logo{
+  position: relative;
+  top: 7px;
+  left: 4px;
 }

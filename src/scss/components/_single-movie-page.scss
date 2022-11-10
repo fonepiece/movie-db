@@ -1,0 +1,46 @@
+//single movie page styling
+
+.single-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    border: solid .1rem rgb(10, 10, 10) ;
+    background-color: rgba(0, 0, 0, 0.68); 
+}
+
+.poster-info img {
+    width: 100%;
+    height: auto;
+}
+
+.rating-release {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.movie-details {
+    background-color: rgb(0,0,0, 0.7);
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+  
+.bg-cover {
+    z-index: -1;
+    background-size: cover;
+    -webkit-filter: brightness(25%);
+    filter: brightness(25%);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: auto;
+}
+
+.tagline {
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+

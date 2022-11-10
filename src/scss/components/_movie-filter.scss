@@ -1,0 +1,46 @@
+//movie filter dropdown menu
+
+.select-page {
+    margin-top: .8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 50em) {
+    .select-page {
+        flex-direction: row;
+    }
+
+    .search {
+        width: 500px;
+    }
+}
+
+.pink-text {
+    color: #fb49fb;
+}
+
+.search {
+    width: 280px;
+    height: 40px;  
+    border-radius: 4px;
+    border: 0.1rem solid grey;
+    background: transparent;
+    color: #fff;
+    padding-left: 15px;
+}
+
+.search:focus {
+    border-color: #fb49fb;
+}
+
+::placeholder {
+    color: #fff;
+}
+

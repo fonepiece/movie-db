@@ -1,0 +1,14 @@
+//about page styling
+
+.about-page-box {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: solid .1rem rgba(233, 232, 239, 0.197) ;
+    background-color: rgba(0, 0, 0, 0.282);
+}
+
+.about-page-info {
+    padding: 30px;
+}

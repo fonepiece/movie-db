@@ -1,0 +1,15 @@
+//normalize (resets)
+@use './base/normalize';
+
+//components
+@use './components/body';
+@use './components/pagination';
+@use './components/header';
+@use './components/favs-button';
+@use './components/movie-carousel';
+@use './components/movie-filter';
+@use './components/movie-card';
+@use './components/footer';
+@use './components/single-movie-page';
+@use './components/about-page';
+@use './components/favourites-page';

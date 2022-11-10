@@ -1,0 +1,14 @@
+.pagination{
+    overflow: hidden;
+    .page-link, .page-link.active {
+        color: white;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    
+    .active > .page-link, .page-link.active {
+        color: white;
+        background-color: #fb49fb;
+        border-color: transparent;
+    }
+  }

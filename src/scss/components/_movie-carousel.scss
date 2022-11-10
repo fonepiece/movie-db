@@ -1,0 +1,44 @@
+//image slider
+
+
+
+.hero {
+  position: relative;
+  height: 25vh;
+  overflow: hidden;
+}
+
+.hero img {
+  opacity: 77%;
+}
+
+.hero-movie-title h2 {
+  z-index: 999;
+  position: absolute;
+  float: right;
+  right: 8%;
+  top: 53%;
+  margin-left: 0.5rem;
+  color: #f4f4f4;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero-movie-title h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-movie-title {
+  display: none;
+}
+
+@media screen and (min-width: 50em) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-movie-title {
+    display: block;
+  }
+}
